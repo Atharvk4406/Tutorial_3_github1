@@ -2,17 +2,13 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                checkout scm
-            }
-        }
 
         stage('Run Python') {
             steps {
-                bat 'python --version'
-                bat 'python app.py'
+                bat '"C:\\Users\\Atharv\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" --version'
+                bat '"C:\\Users\\Atharv\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" app.py'
             }
         }
+
     }
 }
